@@ -23,6 +23,12 @@ $(call inherit-product, device/asus/deb/device.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
+# Kernel inline build
+TARGET_KERNEL_SOURCE := kernel/google/msm
+TARGET_KERNEL_CONFIG := flo_defconfig   
+TARGET_VARIANT_CONFIG := flo_defconfig
+TARGET_SELINUX_CONFIG := flo_defconfig
+
 PRODUCT_NAME := aosp_deb
 PRODUCT_DEVICE := deb
 PRODUCT_BRAND := Android
